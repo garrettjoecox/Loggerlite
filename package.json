@@ -24,6 +24,7 @@
   },
   "homepage": "https://github.com/garrettjoecox/loggerlite",
   "dependencies": {
+    "colorslite": "0.0.1",
     "lodash": "^3.6.0"
   }
 }
