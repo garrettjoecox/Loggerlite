@@ -1,6 +1,6 @@
 {
   "name": "loggerlite",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "A lightweight logging package for node",
   "main": "loggerlite.js",
   "repository": {
@@ -24,7 +24,6 @@
   },
   "homepage": "https://github.com/garrettjoecox/loggerlite",
   "dependencies": {
-    "colorslite": "0.0.1",
-    "lodash": "^3.6.0"
+    "colorslite": "0.0.1"
   }
 }
