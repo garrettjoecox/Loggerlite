@@ -16,6 +16,17 @@ module.exports = function() {
   }
 }
 
+module.exports.time = function(label) {
+  global.loggerlite.timers = global.loggerlite.timers || {};
+
+  if (global.loggerlite.timers[label]) {
+    var ms = Date.now() - global.loggerlite.timers[label];
+    return ( Math.floor( ms / 100 ) / 10 );
+  } else {
+    global.loggerlite.timers[label] = Date.now();
+  }
+}
+
 module.exports.error = function() {
   if (canLog('error')) {
     arguments[0] = global.loggerlite.corePrefix + global.loggerlite.errorPrefix + global.loggerlite.seperator + arguments[0];
