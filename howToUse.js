@@ -1,14 +1,12 @@
 
 var log = require('./loggerlite');
+global.loggerlite.corePrefix = '['.cyan + 'populr'.magenta + ']'.cyan;
+global.loggerlite.logLevel = 'verbose';
 
-var person = 'Garrett Cox';
-var color = 'Orange';
-var age = 19;
-var friend = 'Blake Mckinley';
-var weather = 'Sunny';
+log('Hello');
 
-log('Hello %s, today\'s forcast is %s.', person, weather);
+log.error('This is an error!');
 
-log.err('There is a problem, %s should\'nt be %s already!', person, age);
+log.info('this is info');
 
-log.ok('%s\'s favorite color is %s.', friend, color);
+log.verbose('This is pretty verbose');
