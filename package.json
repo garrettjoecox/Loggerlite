@@ -1,8 +1,8 @@
 {
   "name": "loggerlite",
-  "version": "0.0.5",
+  "version": "1.0.0",
   "description": "A lightweight/customizeable logging package for node's console",
-  "main": "loggerlite.js",
+  "main": "dist/index.js",
   "repository": {
     "type": "git",
     "url": "http://github.com/garrettjoecox/loggerlite"
@@ -23,7 +23,15 @@
     "url": "https://github.com/garrettjoecox/loggerlite/issues"
   },
   "homepage": "https://github.com/garrettjoecox/loggerlite",
+  "devDependencies": {
+    "babel-cli": "^6.5.1",
+    "babel-preset-es2015": "^6.5.0"
+  },
+  "scripts": {
+    "build": "babel src -d dist",
+    "prepublish": "npm run build"
+  },
   "dependencies": {
-    "colorslite": "0.0.3"
+    "colorslite": "*"
   }
 }
